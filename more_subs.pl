@@ -2,6 +2,7 @@
 use 5.010;
 use strict;
 use warnings;
+use Data::Dumper qw(Dumper);
 
 # A sub that returns the total of a given array of numbers
 sub total {
@@ -12,7 +13,7 @@ sub total {
      return $sum;
 }
 
-
+say "The total of 1 .. 1000 is :";
 say &total(1..1000);
 
 # return the average of an array of numbers
@@ -36,6 +37,11 @@ sub above_average {
   @list;
 }
 
+my @nums = qw(5 1 2 8 9 10);
+my @abvavg =  &above_average(@nums);
+say "The numbers that are abover average in the array(5, 1, 2, 8, 9, 10) are: ";
+say Dumper \@abvavg;
+
 # Greet person telling them the last person it greeted
 sub greet {
     state $last_person;
@@ -53,4 +59,8 @@ sub greet {
 
     $last_person = $name;
 }
+
+
+say &greet("Billy");
+say &greet("Bobby");
 
