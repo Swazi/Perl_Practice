@@ -23,14 +23,14 @@ exit 0;
 
 # The fibonacci sub
 sub fibonacci {
-  $a = 0;
-  $b = 1;
+  my $a = 0;
+  my $b = 1;
 
-  $n = $_[0];
+  my $n = $_[0];
 
-  for ($i=0;$i<$n;$i++){
+  for (my $i=0;$i<$n;$i++){
       printf "%d\n", $a;
-    $sum = $a + $b;
+    my $sum = $a + $b;
     $a = $b;
     $b = $sum;
   }
