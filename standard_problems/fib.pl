@@ -6,7 +6,7 @@ use warnings;
 sub main {
 
 
-say "\nHow many numbers of the sequence would you like?\n";
+say "\nHow many numbers of the sequence would you like? \n";
 
 # We use <STDIN> to get the data from stdin here
 
@@ -26,7 +26,9 @@ sub fibonacci {
   my $a = 0;
   my $b = 1;
 
-  my $n = $_[0];
+  my $n = shift @_;
+
+  say "\nThe first $n numbers of the fibonacci sequence are \n";
 
   for (my $i=0;$i<$n;$i++){
       printf "%d\n", $a;
