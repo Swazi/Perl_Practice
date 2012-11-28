@@ -131,7 +131,7 @@ sub main {
     my $again = <STDIN>;
     chomp $again;
     
-    if ($again eq "Y" or $again eq "y") {
+    if (lc($again) eq "y") {
 	print "\n";
 	&main;	    
     }
