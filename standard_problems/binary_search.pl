@@ -30,4 +30,4 @@ my $letter = "J";
 
 my @alphabet = qw(A B C D E F G H I J K L M N O P Q R S T U V W X Y Z);
 
-print "Index of $letter in the alphabet is: ", bin_search_string( \@alphabet, $letter ), "\n";
+print "Index of $letter in \@alphabet is: ", bin_search_string( \@alphabet, $letter ), "\n";
