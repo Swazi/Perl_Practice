@@ -2,9 +2,10 @@
 use 5.010;
 use strict;
 use warnings;
+use List::Util qw(shuffle);
 
-
-my @unsorted = qw/1 10 15 3 20 2 5 4 8 5 7 6 12 13 19/;
+my @data = (1..25);
+my @unsorted = shuffle @data;
 my @sorted   = mergesort( @unsorted );
 
 say "\nUnsorted: @unsorted";
